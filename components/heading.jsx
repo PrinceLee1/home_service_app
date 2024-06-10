@@ -1,7 +1,7 @@
 import { View, Text, Pressable } from 'react-native'
 import React from 'react'
 
-export default function heading({text, isViewAll = false, listAll, setListAll}) {
+export default function Heading({text, isViewAll = false, listAll, setListAll}) {
   
   return (
     <View className="flex-row justify-between items-center">

@@ -17,7 +17,7 @@ export default function categories() {
             setCategories(res?.data?.categories)
         });
     }
-    const displayedCategories = listAll ? categories : categories?.slice(0, 3);
+    const displayedCategories = listAll ? categories : categories?.slice(0, 4);
 
   return (
     <View className="mt-4">

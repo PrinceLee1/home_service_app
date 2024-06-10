@@ -1,9 +1,13 @@
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { useNavigation } from '@react-navigation/native'
 
 export default function businessListItemSmall({business}) {
+  const navigation = useNavigation();
   return (
-    <View className=" mb-6 p-[10px] bg-white border-10 border-white rounded-xl w-[180px]">
+    <TouchableOpacity className="mb-6 p-[10px] bg-white border-10 border-white rounded-xl w-[180px]" onPress={() => navigation.push('business-detail', {
+      business: business
+    })}>
         <Image source={{uri: business?.images[0].url}} 
             className="w-[160px] h-[100px] rounded-xl"
         />
@@ -14,6 +18,6 @@ export default function businessListItemSmall({business}) {
               <Text className="font-[10px] font-[outfit] text-[#8E3FFF]" >{business?.category?.name}</Text>
             </View>
         </View>
-    </View>
+    </TouchableOpacity>
   )
 }

@@ -9,6 +9,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import colors from "../utils/colors";
 import HomeNavigation from "./HomeNavigation";
+import BookingNavigation from "./BookingNavigation";
 const Tab = createBottomTabNavigator();
 export default function tabNavigation() {
   return (
@@ -33,6 +34,20 @@ export default function tabNavigation() {
         }}
       />
       <Tab.Screen
+        name="Booking"
+        component={BookingNavigation}
+        options={{
+          tabBarLabel: ({ color }) => (
+            <Text className="text-[12px] -mt-[7px]" style={{ color: color }}>
+              Booking
+            </Text>
+          ),
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome name="bookmark-o" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
         name="Profile"
         component={ProfileScreen}
         options={{
@@ -46,20 +61,7 @@ export default function tabNavigation() {
           ),
         }}
       />
-      <Tab.Screen
-        name="Booking"
-        component={BookingScreen}
-        options={{
-          tabBarLabel: ({ color }) => (
-            <Text className="text-[12px] -mt-[7px]" style={{ color: color }}>
-              Booking
-            </Text>
-          ),
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome name="bookmark-o" size={size} color={color} />
-          ),
-        }}
-      />
+
     </Tab.Navigator>
   );
 }

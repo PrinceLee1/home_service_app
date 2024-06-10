@@ -23,7 +23,7 @@ export default function businessList() {
 
   return (
     <View className="mt-4 mb-6">
-      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{marginTop: 10, paddingBottom: 200}}>
+      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{marginTop: 10, paddingBottom: 600}}>
         <Heading text={'Latest Business'} isViewAll={true} listAll={listAll} setListAll={setListAll}/>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           {

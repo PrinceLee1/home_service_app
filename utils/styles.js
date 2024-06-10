@@ -25,8 +25,8 @@ export default {
         marginTop: 40
     },
     userImage: {
-        width: 45,
-        height: 45,
+        width: 55,
+        height: 55,
         borderRadius: 99,
     },
     container: {
